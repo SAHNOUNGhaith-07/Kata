@@ -1,8 +1,8 @@
 package com.gildedrose;
 
-public class ItemUtility {
+public class ItemUtility{
 
-	public Item updateNormaltem(Item item) {
+	public static Item updateNormaltem(Item item) {
 		if (item.quality > 1) {
 			item.quality = item.quality - 2;
 		}
@@ -10,7 +10,7 @@ public class ItemUtility {
 		return item;
 	}
 
-	public Item updateConjuredItem(Item item) {
+	public static Item updateConjuredItem(Item item) {
 
 		if (item.quality > 3) {
 			item.quality = item.quality - 4;
@@ -19,11 +19,11 @@ public class ItemUtility {
 		return item;
 	}
 
-	public Item updateSulfurasItem(Item item) {
+	public static Item updateSulfurasItem(Item item) {
 		return item;
 	}
 
-	public Item updateAgedBackstageItem(Item item) {
+	public static Item updateAgedBackstageItem(Item item) {
 		// if item.sellIn==0, we are in the last day of the concert
 		if (item.sellIn < 0) {
 			item.quality = 0;
